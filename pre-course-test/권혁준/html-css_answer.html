@@ -1,0 +1,115 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title></title>
+  
+  <style>
+    .wrapper {
+        width: 400px;
+        height: 300px;
+        border: 1px solid black;
+        background-color: #fae1e6;
+    }
+
+    .sidebar-nav {
+        position: relative;
+        border-right: 1px solid black;
+        height: 100%;
+        width: 28.57%;  /*좌측 사이드 메뉴 2:5 비율 조정*/
+        background-color: #fae7b0;
+        overflow-x: hidden;
+        float: left;
+    }
+
+    .sidebar-nav ul {
+        list-style-type: none;
+        margin-block-start: 0px;
+        padding-inline-start: 0px;
+    }
+
+    .sidebar-nav ul li {
+        border-bottom: 1px solid black;
+        padding: 5px;
+    }
+
+    .sidebar-nav ul li a {
+        text-decoration: none;
+        color: black;
+    }
+
+    .sidebar-nav ul li a:hover {
+        color: #38c0fe;
+        font-weight: bold;
+    }
+
+    .main-content {
+        height: 100px;
+        float: left;
+        padding-top: 20px;
+        padding-left: 10px;
+    }
+
+    .main-content h1 {
+        font-size: 13px;
+    }
+
+    .main-content .btn {
+        border: 0;
+        background-color: white;
+        box-shadow: 3px 3px 5px #8080804a;
+        cursor: pointer;
+    }
+
+    .main-content .btn:hover {
+        color: white;
+        background-color: #38c0fe;
+        box-shadow: 3px 3px 5px gray;
+    }
+
+    .footer {
+        width: 100%;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        text-align: center;
+        font-size: 8px;
+        padding-bottom: 5px;
+    }
+    </style>
+</head>
+
+<body>
+  <div class="wrapper">
+
+    <div class="sidebar-nav">
+      <div>
+        <ul>
+          <li>
+            <a href="#">news</a>
+          </li>
+          <li>
+            <a href="#">posts</a>
+          </li>
+          <li>
+            <a href="#">profile</a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer">
+        2019 Ebay Korea
+      </div>
+    </div>
+
+    <div class="main-content">
+      <h1>Hello Ebay</h1>
+      <div>
+        <input class="btn" type="button" value="Read more...">
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
