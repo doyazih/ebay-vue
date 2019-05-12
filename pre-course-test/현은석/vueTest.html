@@ -1,0 +1,39 @@
+
+<div id="app">
+  <my-component></my-component>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+<script>
+  var cmp = {
+    template:  '<div><button v-on:click="alert();">click me</button><p v-if="login">user has been logged in</p><hello-vue v-bind:num="num" v-on:add-num="addNumber"></hello-vue></div>',
+    data: function() {
+        return {
+          login: false,
+          num: 10
+        }
+    },
+    methods: {
+      addNumber: function () {
+        this.num++;
+      }
+    }
+  };
+
+  Vue.component('hello-vue', {
+    props: ['num'],
+    template: '<p>hello vue, number : {{ num }} <button v-on:click="addNum">add num</button></p>',
+    methods: {
+      addNum: function () {
+        this.$emit('add-num');
+      }
+    }
+  });
+
+  new Vue({
+    el: '#app',
+    components: {
+      'my-component': cmp
+    }
+  });
+</script>

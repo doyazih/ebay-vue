@@ -1,0 +1,78 @@
+<html>
+  <head>
+    <style>      
+      #page {
+        display: grid;
+        width: 400px;
+        height: 300px;
+        grid-template-areas: "nav main"
+                             "footer main";
+        grid-template-columns: 2fr 5fr;
+        grid-auto-rows: minmax(100px, auto);
+        border: 1px black solid;
+        background-color: orange;
+      }
+
+      #page > nav {
+        grid-area: nav;
+        display: grid;
+        align-self: start;
+      }
+
+      #page > main {
+        grid-area: main;
+        background-color: pink;
+        border-left: 1px black solid;
+      }
+
+      #page > footer {
+        grid-area: footer;
+        display: grid;
+        align-self: end;
+      }
+
+      .tab {
+        border-bottom: 1px black solid;
+        height: 20px;
+        padding: 2px;
+        padding-left: 7px;
+        text-align: left;
+        cursor: pointer;
+      }
+
+      .tab:hover {
+        color: blue;
+      }
+
+      .main-cell {
+        margin: 10px;
+      }
+
+      .awesome-button {
+        height: 30px;
+        color: rgba(30, 22, 54, 0.6);
+        box-shadow: rgba(30, 22, 54, 0.4) 0 0px 0px 2px inset;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <section id="page">
+      <nav>
+        <div class="tab">news</div>
+        <div class="tab">posts</div>
+        <div class="tab">profile</div>
+      </nav>
+      <main>
+        <div class="main-cell">
+          Hello Ebay
+          <br><br>
+          <button class="awesome-button">Read more...</button>
+        </div>        
+      </main>
+      <footer>
+        2019 Ebay Korea
+      </footer>
+    </section>
+  </body>
+</html>
