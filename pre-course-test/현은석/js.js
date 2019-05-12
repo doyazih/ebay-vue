@@ -1,5 +1,5 @@
-
-let result = [];
+// jsfiddle 에서 실행해보세요.
+// 결과값이 console에 표시됩니다.
 
 const makeUserTitle = (data) => {
   return new Promise((resolve, reject) => {
